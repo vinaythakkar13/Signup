@@ -24,7 +24,7 @@ const ToastComponent = (props) => {
         toastClass = '';
     }
     return (
-        message !== '' && <Toast onClose={() => props.hideToast()} className={toastClass} show={showToast} delay={30000000} autohide>
+        message !== '' && <Toast onClose={() => props.hideToast()} className={toastClass} show={showToast} delay={3000} autohide>
             <div className={`tostcenter ${type}`}>
                 <p>{message}</p>
             </div>
