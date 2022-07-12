@@ -1,0 +1,41 @@
+@import "../../../Assets/variable.scss";
+
+.btn {
+  &.custombtn {
+    border: 1px solid transparent;
+    font-size: $FONT_18 ;
+    font-weight: normal;
+    border-radius: 20px ;
+    padding: 6px 16px ;
+    box-shadow: none;
+    min-height: 36px;
+    transition: none ;
+    cursor: pointer;
+    color: $TEXT-BLACK;
+    background-color: $BG-BUTTON-GREEN;
+
+    &:disabled {
+      opacity: 1 ;
+      cursor: no-drop;
+      pointer-events: all;
+      border: 1px solid rgba(64, 87, 146, 0.4) ;
+      background-color: $BG-GRAY
+    }
+
+    &:not(:disabled) {
+      box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+    }
+
+    &:not(.disabled):focus {
+      box-shadow: none ;
+    }
+
+    &.btn-loading {
+      opacity: 1 ;
+      cursor: default;
+    }
+  }
+}

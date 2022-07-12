@@ -1,0 +1,116 @@
+@import "../../Assets/variable.scss";
+
+.signUpPage {
+  padding: 16px 16px;
+  width: 100%;
+  height: 100%;
+  background-color: $BG-BLACK;
+  overflow: hidden;
+
+  .innerContainer {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    form {
+      border-radius: 16px;
+      background-color: $BG-LIGHT-BLACK;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+
+      .formContainer {
+        max-width: 360px;
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+        .nav-tabs {
+          padding: 2px;
+          display: flex;
+          border-radius: 20px;
+          background-color: $BG-BLACK;
+          margin: 0;
+
+          &:focus-visible{
+            outline: none;
+          }
+
+          li {
+            display: inline-flex;
+            border: transparent;
+
+            &:focus-visible{
+              outline: none;
+            }
+            .nav-link {
+              background-color: $BG-BLACK;
+              border-radius: 18px;
+              padding: 8px;
+              color: $TEXT-WHITE;
+              cursor: pointer;
+              border: transparent;
+              &.active {
+                color: $TEXT-BLACK;
+                background-color: $BG-LIGHT-GREEN;
+              }
+
+              &:focus-visible{
+                outline: none;
+              }
+            }
+          }
+        }
+
+        .formInnerContainer {
+          overflow-y: auto;
+          width: 100%;
+          margin-top: 24px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &.table-scroll::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 0;
+            height: 0;
+          }
+          .labelTitle {
+            width: 100%;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 8px;
+
+            &.formHeader {
+              text-align: center;
+              font-size: $FONT_20;
+              font-weight: 700;
+              margin: 16px 0;
+            }
+          }
+
+          .textField .form-control {
+            width: 100%;
+            max-width: 360px;
+          }
+
+          .termsAndCondition {
+            position: relative;
+
+            .termsLabel {
+              width: 100%;
+              position: absolute;
+              top: 0;
+            }
+          }
+
+          .formSubmit {
+            margin-top: 12px;
+          }
+          
+        }
+      }
+    }
+  }
+}

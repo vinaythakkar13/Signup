@@ -1,0 +1,87 @@
+@import "../../../assets/variable.scss";
+
+.toast {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 9999;
+  text-align: center;
+  flex-basis: inherit !important;
+  margin: 0 auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  padding: 20px 0 0 0;
+  display: none;
+  width: inherit !important;
+
+  .tostcenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    max-width: 520px;
+    border-radius: 8px;
+    padding: 24px 20px 21px 20px;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+
+    &.success{
+      background-color: $BG-LIGHT-GREEN;
+      color: $TEXT-BLACK;
+    }
+
+    &.error{
+      background-color: $BG-BRIGHT-RED;
+      color:$TEXT-WHITE;
+    }
+
+    p {
+      font-weight: 600;
+      text-align: left;
+      line-height: 16px;
+      margin: 0px;
+      font-size: $FONT_20;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &.show {
+    display: block;
+  }
+
+  &.success-txt {
+    .tostcenter {
+      p {
+        color: $TEXT-BLACK;
+      }
+    }
+  }
+
+  &.error-txt {
+    .tostcenter {
+      p {
+        color: $TEXT-WHITE;
+      }
+    }
+  }
+
+  &.warning-txt {
+    .tostcenter {
+      p {
+        color: $TEXT-BLACK;
+      }
+    }
+  }
+}

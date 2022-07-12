@@ -1,0 +1,119 @@
+@import "../../../Assets/variable.scss";
+
+.checkboxMain {
+  display: block;
+}
+
+.checkboxMain input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.checkboxMain label {
+  position: relative;
+  cursor: pointer;
+  font-size: $FONT_14;
+  margin: 0;
+  color:$TEXT-WHITE;
+
+  a{
+    text-decoration: none;
+    color: $BG-LIGHT-GREEN;
+  }
+}
+
+.checkboxMain input:disabled+label {
+  opacity: 0.5;
+}
+
+.checkboxMain label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: $BG-LIGHT-GREEN;
+  padding: 7px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 8px;
+  border-radius: 3px;
+  top: -1px;
+}
+
+.checkboxMain input:checked+label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  border-color: $TEXT-WHITE;
+  border-style: solid;
+}
+
+.checkboxMain input:checked+label::before {
+  background-color: $BG-LIGHT-GREEN;
+}
+
+//media
+@media screen and (max-width: 767px) {
+  .checkboxMain label {
+    font-size: $FONT_12;
+  }
+
+  .checkboxMain input:checked+label:after {
+    position: absolute;
+    top: 3px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .checkboxMain label {
+    font-size: $FONT_12;
+    line-height: 16px;
+  }
+
+  .checkboxMain input:checked+label:after {
+    position: absolute;
+    top: 2px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1279px) {
+  .checkboxMain label {
+    font-size: $FONT_12;
+    line-height: 16px;
+  }
+
+  .checkboxMain input:checked+label:after {
+    position: absolute;
+    top: 2px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .checkboxMain label {
+    font-size: $FONT_12;
+    line-height: 16px;
+  }
+
+  .checkboxMain input:checked+label:after {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .checkboxMain input:checked+label:after {
+    position: absolute;
+    top: 3px;
+  }
+}

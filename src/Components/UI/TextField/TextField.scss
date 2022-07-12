@@ -1,0 +1,117 @@
+@import '../../../Assets/variable.scss';
+
+.textField {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+
+  .form-control {
+    // background: $BG_WHITE;
+    background: transparent;
+    font-size: $FONT_14;
+    padding: 6px 16px;
+    padding-right: 40px;
+    height: 48px;
+    width: 100%;
+    border-radius: 32px;
+    color :$TEXT-WHITE;
+    border-style: solid;
+    border-color: $BG-LIGHT-GREEN;
+    border-width: 2px;
+    outline: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:disabled {
+      background: #f6f6f6;
+      border: 1px solid #eee;
+      color: $TEXT_GRAY;
+      cursor: not-allowed;
+    }
+
+    &.error {
+      color: $TEXT-RED;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      text-shadow: none;
+    }
+
+    &::placeholder {
+        color: $TEXT_GRAY;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: $TEXT_GRAY;
+    }
+
+    &::-ms-input-placeholder {
+        color: $TEXT_GRAY;
+    }
+  }
+
+  .iconSection {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-css {
+    position: relative;
+    font-size: $FONT_18;
+    cursor: pointer;
+  }
+
+  .errorMsg {
+    position: relative;
+    width: 100%;
+    left: 0;
+    display: block;
+    font-size: $FONT_12;
+    text-align: left;
+    padding: 4px 0;
+    margin: 0;
+    color: $TEXT-RED;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .errorMsg.show {
+    max-height: 130px;
+    transition: max-height 0.3s ease-in;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: $TEXT-RED;
+    .red,
+    .green {
+      display: flex;
+      padding: 2px 0;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+
+      span{
+        white-space: pre-wrap;
+      }
+    }
+
+    .green{
+      color: $TEXT-LIGHT-GREEN;
+    }
+  }
+}
