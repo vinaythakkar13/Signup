@@ -10,7 +10,10 @@ const ToastComponent = (props) => {
     console.log('Props : ', props);
 
     useEffect(() => {
-        setShowToast(show)
+        setShowToast(show);
+        setTimeout(() => {
+            setShowToast(false);
+        }, 3000);
     }, [show])
 
     let toastClass;
