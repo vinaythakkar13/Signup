@@ -47,12 +47,10 @@ function Signup() {
 
     if(userType === 'FAN'){
       await fanAPI.post('', user).then(res => {
-        // console.log('Response : ', res);
         setShowToastMessage(true);
         setToastType('success');
         setToastMessage('Signup successfully.');
       }).catch(err => {
-        // console.log('Error : ', err);
         setShowToastMessage(true);
         setToastType('error');
         setToastMessage('Something went wrong.');
